@@ -1,30 +1,81 @@
-# React + TypeScript + Vite
+# [שם הפרויקט שלך - לדוגמה: TaskFlow]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+מערכת ניהול משימות Full-Stack מתקדמת המאפשרת למשתמשים לנהל את המשימות שלהם ביעילות, עם יכולות ניהול משתמשים ומשימות למנהלי מערכת. הפרויקט נבנה באמצעות React (עם Vite) בצד הלקוח, Node.js/Express בצד השרת, MongoDB לאחסון נתונים, ו-Tailwind CSS לעיצוב.
 
-Currently, two official plugins are available:
+## ✨ פיצ'רים מרכזיים
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **ניהול משימות מקיף (CRUD):**
+    * יצירת משימות חדשות עם כותרת, תיאור ותאריך יעד.
+    * עריכת פרטי משימות קיימות.
+    * מחיקת משימות.
+* **מעקב וארגון משימות:**
+    * סימון סטטוס התקדמות למשימות (למשל: 'Pending', 'In Progress', 'Done').
+    * סימון משימות כמועדפות (⭐) לגישה מהירה והדגשה.
+    * הוספת תאריך יעד לכל משימה.
+* **מיון וסינון גמישים:**
+    * מיון רשימת המשימות לפי תאריך יצירה, תאריך יעד או סטטוס.
+    * סינון דינמי של משימות לפי סטטוס, משימות מועדפות, ומשתמש משויך (זמין למנהלי מערכת).
+* **ניהול משתמשים והרשאות:**
+    * מערכת הרשמה והתחברות מאובטחת למשתמשים.
+    * תפקידי משתמשים: משתמש רגיל ומנהל מערכת (Admin).
+* **יכולות אדמין ייחודיות:**
+    * יכולת לשייך/להקצות משימות קיימות או חדשות למשתמשים ספציפיים במערכת.
+    * יכולת להעניק או לשלול הרשאות מנהל ממשתמשים אחרים.
 
-## Expanding the ESLint configuration
+## 🚀 טכנולוגיות
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* **Frontend:** React, Vite, Tailwind CSS, **Axios**, [React Router? Zustand/Redux/Context API?]
+* **Backend:** Node.js, Express.js, **Mongoose**, JWT 
+* **Database:** MongoDB
+* **כלים נוספים:** ESLint, Prettier (לפי קבצי ההגדרות בפרויקט)
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ התקנה והרצה
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+**דרישות קדם:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+* Node.js (גרסה מומלצת: [ציין גרסה, לדוגמה: 18.x ומעלה])
+* npm או yarn
+* MongoDB מותקן ורץ (מקומי או ב-Atlas)
+
+**שלבי התקנה:**
+
+1.  **שכפול ה-Repository:**
+    ```bash
+    git clone (https://github.com/YahavHelfer/Task-Manager.git
+)
+    cd __react-flowbite-starter__
+    ```
+
+2.  **התקנת תלויות Backend:**
+    ```bash
+    cd server
+    npm install # או yarn install
+    ```
+
+3.  **התקנת תלויות Frontend (מתיקיית השורש):**
+    ```bash
+    cd .. # אם נכנסת לתיקיית server קודם
+    npm install # או yarn install
+    ```
+
+
+      # הוסף משתנים נוספים אם יש, לדוגמה לחיבור לשירותי מייל וכו'
+      ```
+    * מלא את הערכים המתאימים בקובץ ה-`.env` שיצרת.
+
+   
+
+6.  **הרצת הפרויקט:**
+    * **הפעלת השרת (Backend) - מתוך תיקיית `server`:**
+        ```bash
+        cd server
+        npm run dev # או הפקודה המתאימה להרצת השרת בפיתוח (בדוק ב-package.json)
+        ```
+    * **הפעלת הלקוח (Frontend) - מתוך תיקיית השורש:**
+        * פתח טרמינל חדש.
+        * ודא שאתה נמצא בתיקיית **השורש** של הפרויקט.
+        ```bash
+        npm run dev # או הפקודה המתאימה להרצת הלקוח בפיתוח (בדוק ב-package.json הראשי)
+        ```
+
+7.  פתח את הדפדפן ועבור לכתובת שמוצגת בטרמינל של ה-Frontend (לרוב `http://localhost:5173` עבור Vite).
