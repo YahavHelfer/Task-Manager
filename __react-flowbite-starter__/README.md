@@ -41,7 +41,7 @@ Task Manager
 
 1.  **שכפול ה-Repository:**
     ```bash
-    git clone [כתובת ה-repository שלך]
+    git clone (https://github.com/YahavHelfer/Task-Manager.git)
     cd _react-flowbite-starter__
     ```
 
